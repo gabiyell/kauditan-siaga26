@@ -145,15 +145,15 @@ Repository: [https://github.com/gabiyell/Kauditan-Siaga-2.0](https://github.com/
 1. Clone repository:
 
    ```bash
-   git clone [https://github.com/gabiyell/Kauditan-Siaga-2.0.git](https://github.com/gabiyell/Kauditan-Siaga-2.0.git)
+   git clone https://github.com/gabiyell/Kauditan-Siaga-2.0.git
    cd Kauditan-Siaga-2.0
    ```
 
-2. Pasang dependensi di folder `backend` dan `frontend` (masing-masing memiliki `package.json`):
+2. Pasang dependensi backend dan frontend:
 
    ```bash
-   cd backend && npm install
-   cd ../frontend && npm install
+   npm --prefix backend install
+   npm --prefix frontend install
    ```
 
 3. Siapkan konfigurasi. Salin file contoh `.env.example` di `backend` dan `frontend` menjadi `.env`, lalu isi koneksi database, API key NASA FIRMS, interval sinkronisasi, kredensial AWS S3, dan secret JWT:
@@ -165,12 +165,21 @@ Repository: [https://github.com/gabiyell/Kauditan-Siaga-2.0](https://github.com/
 
 4. Siapkan database PostgreSQL: buat database, aktifkan ekstensi PostGIS, lalu jalankan skrip pada `backend/migrations` dan data awal pada `backend/seeds`.
 
-5. Jalankan aplikasi (sesuaikan dengan bagian `scripts` pada `package.json` masing-masing folder), lalu buka alamat yang tampil di terminal pada browser:
+5. Jalankan backend dan frontend di dua terminal terpisah (sesuaikan dengan bagian `scripts` pada `package.json` masing-masing folder):
 
-   ```bash
-   cd backend && npm run dev
-   cd frontend && npm run dev
-   ```
+**Terminal 1 — backend**
+
+```bash
+npm --prefix backend run dev
+```
+
+**Terminal 2 — frontend**
+
+```bash
+npm --prefix frontend run dev
+```
+
+Buka alamat frontend yang ditampilkan di terminal pada browser.
 
 ### Akun uji
 
@@ -292,5 +301,4 @@ Ringkasan: **10 kasus uji black-box, 10 lulus**. Daftar lengkap ada di SRS 10.4.
 3. National Aeronautics and Space Administration (NASA). *Fire Information for Resource Management System (FIRMS) API Documentation*.
 4. Pressman, R. S., & Maxim, B. R. (2019). *Software Engineering: A Practitioner's Approach* (9th ed.). McGraw-Hill Education.
 5. Pemerintah Desa Kauditan II. (2026). *Hasil Wawancara Pengumpulan Kebutuhan Sistem (Requirements Gathering) Pemantauan Kebakaran Perkebunan Raya Kauditan*. Minahasa Utara.
-6. Leaflet API Reference. Open-Source JavaScript Library for Interactive Maps.#   k a u d i t a n - s i a g a 2 6  
- 
+6. Leaflet API Reference. Open-Source JavaScript Library for Interactive Maps.
