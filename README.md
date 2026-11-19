@@ -149,11 +149,11 @@ Repository: [https://github.com/gabiyell/Kauditan-Siaga-2.0](https://github.com/
    cd Kauditan-Siaga-2.0
    ```
 
-2. Pasang dependensi backend dan frontend:
+2. Pasang dependensi di folder `backend` dan `frontend` (masing-masing memiliki `package.json`):
 
    ```bash
-   npm --prefix backend install
-   npm --prefix frontend install
+   cd backend && npm install
+   cd ../frontend && npm install
    ```
 
 3. Siapkan konfigurasi. Salin file contoh `.env.example` di `backend` dan `frontend` menjadi `.env`, lalu isi koneksi database, API key NASA FIRMS, interval sinkronisasi, kredensial AWS S3, dan secret JWT:
@@ -165,21 +165,12 @@ Repository: [https://github.com/gabiyell/Kauditan-Siaga-2.0](https://github.com/
 
 4. Siapkan database PostgreSQL: buat database, aktifkan ekstensi PostGIS, lalu jalankan skrip pada `backend/migrations` dan data awal pada `backend/seeds`.
 
-5. Jalankan backend dan frontend di dua terminal terpisah (sesuaikan dengan bagian `scripts` pada `package.json` masing-masing folder):
+5. Jalankan aplikasi (sesuaikan dengan bagian `scripts` pada `package.json` masing-masing folder), lalu buka alamat yang tampil di terminal pada browser:
 
-**Terminal 1 — backend**
-
-```bash
-npm --prefix backend run dev
-```
-
-**Terminal 2 — frontend**
-
-```bash
-npm --prefix frontend run dev
-```
-
-Buka alamat frontend yang ditampilkan di terminal pada browser.
+   ```bash
+   cd backend && npm run dev
+   cd frontend && npm run dev
+   ```
 
 ### Akun uji
 
@@ -209,7 +200,6 @@ Kauditan-Siaga-2.0/
 ├── deploy/                # konfigurasi deployment
 │   ├── aws/
 │   ├── backend/
-│   ├── ml/
 │   ├── release/
 │   └── remote/
 ├── docs/                  # dokumentasi, diagram UML, dan tangkapan layar
