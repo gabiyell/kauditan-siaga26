@@ -15,7 +15,7 @@ Sistem informasi berbasis web untuk Perkebunan Raya Desa Kauditan II yang memban
 | **Studi kasus** | Perkebunan Raya Desa Kauditan II, Minahasa Utara |
 | **Model SDLC** | Waterfall (P1–P6, 2–20 November 2026) |
 | **Versi dokumen** | SRS versi 1.0 — 20 November 2026 |
-| **Repository** | [https://github.com/gabiyell/Kauditan-Siaga-2.0](https://github.com/gabiyell/Kauditan-Siaga-2.0) |
+| **Repository** | [https://github.com/gabiyell/Kauditan-Siaga-2.0](https://github.com/gabiyell/Kauditan-Siaga-26) |
 | **Prototipe UI** | [Figma — UI-UX Kauditan Siaga versi beta 1.0](https://www.figma.com/proto/4iZq7M7G2g4CjL2WFVjUvg/UI-UX-Kauditan-siaga-versi-beta-1.0?node-id=0-1&t=RLLOmOddJhigZiRx-1) |
 
 ## Anggota Kelompok
